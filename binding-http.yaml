@@ -1,0 +1,13 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: loan-service
+  namespace: <NAMESPACE>
+spec:
+  type: bindings.http
+  version: v1
+  metadata:
+  - name: method
+    value: POST
+  - name: url
+    value: http://localhost:30004/loan-service/api/v1
